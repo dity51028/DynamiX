@@ -50,7 +50,7 @@ function CompactCard ({params,setExpanded}){
 
     return(
         <motion.div 
-        className="CompactCard flex flex-1 z-0 !h-[10rem] w-[20rem] border-white rounded-lg  cursor-pointer !hover:shadow-none p-4" 
+        className="CompactCard flex flex-1  !h-[10rem] w-[20rem] border-white rounded-lg  cursor-pointer !hover:shadow-none p-4" 
         style={{
             background:params.color.backGround,
             boxShadow:params.color.boxShadow
@@ -133,17 +133,17 @@ function ExpandedCard ({params,setExpanded}){
   
   };
     return(
-        <div className="ExpandedCard font-bold absolute  w-[40%] h-[50vh]  border rounded-lg flex flex-col items-center justify-between "
+        <div className="ExpandedCard font-bold absolute z-50 w-[40%] h-[50vh]  border rounded-lg flex flex-col items-center justify-between "
         style={{
           background:params.color.backGround,
           boxShadow:params.color.boxShadow,
-          zIndex:9999,
+         
         }}
        layoutId='expandableCard'
-       onClick={setExpanded}
+       
       // Add `position: fixed` to ensure it breaks out of the stacking context
       // and is positioned relative to the viewport
-      position="fixed"
+      position="absolute"
       top="10rem"
       left="25rem"
         

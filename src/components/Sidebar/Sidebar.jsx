@@ -34,7 +34,7 @@ const Sidebar = ({toggleIsSidebar}) => {
            {menuItems.map((item, index) => (
             <li 
               key={index} 
-              className={`rounded-2xl mt-10 px-2 py-2 ${activeIndex === index ? 'bg-activeItem' : ''}`} 
+              className={`rounded-2xl mt-10 px-2 py-2 hover:bg-activeItem ${activeIndex === index ? 'bg-activeItem' : ''}`} 
               onClick={() => handleClick(index)} // Handle click event
              >                
              <a href={item.href} className="menu-link flex items-center  gap-4 text-xl ml-4 ">
